@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FaReact } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { Container } from '../../globalStyles';
+import { Container, FlexCol } from '../../globalStyles';
 
 export const Nav = styled.nav`
   background: #0a0b5b;
@@ -57,8 +57,9 @@ export const NavMenu = styled.ul`
   text-align: center;
   /* Burger Menu container */
   @media screen and (max-width: 960px) {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+    ${FlexCol}
     width: 100%;
     height: 90vh;
     position: absolute;

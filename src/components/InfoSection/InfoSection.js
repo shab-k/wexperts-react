@@ -37,7 +37,7 @@ function InfoSection({
                 <H3 lightTopLine={lightTopLine}>{topLine}</H3>
                 <H1 lightText={lightText}>{headline}</H1>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                <Link to="/sign-up">
+                <Link to="/">
                   <Button big fontBig primary={primary}>
                     {buttonLabel}
                   </Button>

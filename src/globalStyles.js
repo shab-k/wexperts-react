@@ -158,4 +158,13 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
   }
 `;
+export const FlexCol = `
+display: flex;
+flex-direction: column;
+`;
+export const FlexRow = `
+display: flex;
+flex-direction: row;
+`;
+
 export default GlobalStyle;

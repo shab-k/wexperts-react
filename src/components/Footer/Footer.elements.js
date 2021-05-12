@@ -1,20 +1,22 @@
 import styled, { css } from 'styled-components';
 import { FaReact } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { Button } from '../../globalStyles';
+import { Button, FlexCol } from '../../globalStyles';
 
 export const FooterContainer = styled.footer`
   background-color: #1c1c1c;
   padding: 1.6rem 0 2rem 0;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  ${FlexCol}
   justify-content: center;
   align-items: center;
 `;
 
 export const FooterSubscription = styled.section`
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  ${FlexCol}
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -90,14 +92,15 @@ export const FooterLinksContainer = styled.section`
 export const FooterLinksWrapper = styled.div`
   display: flex;
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 960px) {
     flex-direction: column;
   }
 `;
 
 export const FooterLinkItems = styled.div`
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  ${FlexCol}
   align-items: flex-start;
   margin: 16px;
   text-align: left;
@@ -136,7 +139,7 @@ export const SocialMediaWrap = styled.div`
   max-width: 1000px;
   margin: 40px auto 0 auto;
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 960px) {
     flex-direction: column;
   }
 `;
