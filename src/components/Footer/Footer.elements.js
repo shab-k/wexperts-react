@@ -64,6 +64,8 @@ export const FormInput = styled.input`
   }
 `;
 export const SubscribeButton = styled(Button)`
+  padding: 12px;
+  font-size: 0.9rem;
   ${(props) =>
     props.subscribeBorder &&
     css`
@@ -73,9 +75,9 @@ export const SubscribeButton = styled(Button)`
 
   @media screen and (max-width: 960px) {
     width: 60%;
-    padding-left: 12px;
-    padding-right: 12px;
-    font-size: 13px;
+    /* padding-left: 12px;
+    padding-right: 12px; */
+    font-size: 0.75rem;
   }
 `;
 export const FooterLinksContainer = styled.section`

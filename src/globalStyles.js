@@ -1,5 +1,6 @@
 import styled, { css, createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { breakpoints } from './utils';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -38,8 +39,8 @@ export const Wrapper = styled.div`
 export const Button = styled.button`
   background-color: ${({ primary }) => (primary ? '#FFC636' : '#0C4ADA')};
   color: ${({ primary }) => (primary ? '#0C4ADA' : '#FFC636')};
-  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
-  padding: ${({ big }) => (big ? '12px 64px' : '10px 17px')};
+  /* font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')}; */
+  /* padding: ${({ big }) => (big ? '12px 64px' : '10px 17px')}; */
   border-radius: 50px;
   white-space: nowrap;
   margin: 10px 10px 10px 0;
@@ -66,10 +67,17 @@ export const Button = styled.button`
   @media screen and (max-width: 992px) {
     width: 100%;
   }
+  font-size: 1.25rem;
+  ${breakpoints('font-size', 'rem', [
+    { 1200: 1.23 },
+    { 992: 1.2 },
+    { 768: 1 },
+  ])};
+  padding: 12px 64px;
+  ${breakpoints('padding', '', [{ 992: '12px 60px' }])};
 `;
 export const H1 = styled.h1`
   margin-bottom: 24px;
-  font-size: 47px;
   line-height: 1;
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#1c2237')};
@@ -83,12 +91,18 @@ export const H1 = styled.h1`
     css`
       text-align: center;
     `}
-  @media screen and (max-width: 992px) {
+  /* @media screen and (max-width: 992px) {
     font-size: 30px;
-  }
+  } */
+  font-size: 3rem;
+  ${breakpoints('font-size', 'rem', [
+    { 1200: 2.9 },
+    { 992: 1.87 },
+    { 768: 1.8 },
+  ])};
 `;
 export const H2 = styled.h2`
-  font-size: 20px;
+  /* font-size: 24px; */
   padding: 0;
   color: #0c4ada;
   margin-bottom: 16px;
@@ -98,7 +112,7 @@ export const H2 = styled.h2`
       color: #fff;
     `}
   ${(props) =>
-    props.big &&
+    props.small &&
     css`
       font-size: 20px;
     `}
@@ -111,14 +125,26 @@ export const H2 = styled.h2`
     text-align: left;
     padding-bottom: 10px;
   }
+  font-size: 1.6rem;
+  ${breakpoints('font-size', 'rem', [
+    { 1200: 1.5 },
+    { 992: 1.4 },
+    { 768: 1.3 },
+  ])};
 `;
 export const H3 = styled.h3`
   color: ${({ lightTopLine }) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
-  font-size: 18px;
+  /* font-size: 18px; */
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
+  font-size: 1.17rem;
+  ${breakpoints('font-size', 'rem', [
+    { 1200: 1.16 },
+    { 992: 1.14 },
+    { 768: 1.12 },
+  ])};
 `;
 export const Paragraph = styled.p`
   text-align: left;
