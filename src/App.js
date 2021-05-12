@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Navbar, Footer } from './components';
+import { Navbar, Create, Footer } from './components';
 import GlobalStyle from './globalStyles';
 import Home from './pages/HomePage/Home';
 
@@ -12,6 +12,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/create">
+          <Create />
         </Route>
       </Switch>
       <Footer />
