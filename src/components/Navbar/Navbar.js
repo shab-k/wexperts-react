@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-// import { Button } from '../../globalStyles';
+import { Button } from '../../globalStyles';
 import {
   Nav,
   NavbarContainer,
@@ -11,6 +11,8 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavItemBtn,
+  NavBtnLink,
 } from './Navbar.elements';
 
 function Navbar() {
@@ -67,7 +69,20 @@ function Navbar() {
                   New Post
                 </NavLinks>
               </NavItem>
-              <NavItem></NavItem>
+              {/* <NavItem></NavItem> */}
+              {/* <NavItemBtn>
+                {button ? (
+                  <NavBtnLink to="/sign-up">
+                    <Button primary>SIGN UP</Button>
+                  </NavBtnLink>
+                ) : (
+                  <NavBtnLink to="/sign-up">
+                    <Button onClick={closeMobileMenu} fontBig primary>
+                      SIGN UP
+                    </Button>
+                  </NavBtnLink>
+                )}
+              </NavItemBtn> */}
             </NavMenu>
           </NavbarContainer>
         </Nav>

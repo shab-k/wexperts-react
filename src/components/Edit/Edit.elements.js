@@ -55,7 +55,7 @@ width: 100%;
   margin: 10px 0;
   border: 1px solid #ddd;
   box-sizing: border-box;
-  display: block; */
+  display: block; 
 `;
 export const Select = styled.select`
   width: 100%;
