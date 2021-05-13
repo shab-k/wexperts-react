@@ -16,11 +16,10 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"npx json-server --watch data/db.json --port 8000\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "concurrently \"json-server --watch data/db.json --port 8000\" \"npm start\""
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +41,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
-    "@babel/core": "^7.14.0"
+    "@babel/core": "^7.14.0",
+    "concurrently": "^6.1.0"
   }
 }
