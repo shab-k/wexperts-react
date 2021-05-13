@@ -16,7 +16,10 @@ const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('John');
-  const [date, setDate] = useState(new Date().toString().substring(0, 24));
+//   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
+    // const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+    // const [date, setDate] = useState(new Date().toLocaleDateString());
+    const [date, setDate] = useState(new Date().toString().substring(0, 24));
   const history = useHistory();
 
   const handleSubmit = (e) => {
