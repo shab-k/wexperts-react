@@ -76,6 +76,14 @@ export const Button = styled.button`
   padding: 12px 64px;
   ${breakpoints('padding', '', [{ 992: '12px 60px' }])};
 `;
+export const DangerButton = styled(Button)`
+  background: crimson;
+  color: white;
+  &:hover {
+    background: #fff;
+    color: crimson;
+  }
+`;
 export const H1 = styled.h1`
   margin-bottom: 24px;
   line-height: 1;
