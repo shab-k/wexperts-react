@@ -12,11 +12,7 @@ const Blog = () => {
   return (
     <div className="blog">
       {error && <div>{error}</div>}
-      {isPending && (
-        <H2 center white>
-          Loading...
-        </H2>
-      )}
+      {isPending && <H2 center>Loading...</H2>}
       {blogs && <BlogList blogs={blogs} />}
     </div>
   );
