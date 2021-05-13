@@ -5,12 +5,14 @@ import About from './pages/About/About';
 import Blog from './pages/Blog';
 import NotFound from './pages/NotFound';
 import { Navbar, Create, Edit, BlogDetails, Footer } from './components';
+import Scroll from './components/Scroll';
 
 function App() {
   return (
     // <div className="App">
     <Router>
       <GlobalStyle />
+      <Scroll />
       <Navbar />
       <Switch>
         <Route exact path="/">
