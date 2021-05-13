@@ -15,7 +15,7 @@ import { Container, Button, H1, Paragraph } from '../../globalStyles';
 const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
-  const [author, setAuthor] = useState('mario');
+  const [author, setAuthor] = useState('John');
   const [date, setDate] = useState(new Date().toString().substring(0, 24));
   const history = useHistory();
 
