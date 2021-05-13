@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import GlobalStyle from './globalStyles';
 import Home from './pages/HomePage/Home';
-// import About from './pages/About/About';
+import About from './pages/About/About';
 import Blog from './pages/Blog';
 import NotFound from './pages/NotFound';
 import { Navbar, Create, Edit, BlogDetails, Footer } from './components';
@@ -16,9 +16,9 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        {/* <Route exact path="/about">
+        <Route exact path="/about">
           <About />
-        </Route> */}
+        </Route>
         <Route path="/blog">
           <Blog />
         </Route>
