@@ -1,6 +1,6 @@
 {
   "name": "wexperts-react",
-  "homepage": "https://shab-k.github.io/wexperts-data"
+  "homepage": "https://shab-k.github.io/wexperts-data",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
