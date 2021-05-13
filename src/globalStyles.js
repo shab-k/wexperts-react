@@ -185,12 +185,12 @@ export const StyledLink = styled(Link)`
   }
 `;
 export const FlexCol = `
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
 export const FlexRow = `
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
 `;
 
 export default GlobalStyle;
