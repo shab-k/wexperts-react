@@ -1,6 +1,5 @@
 import styled, { css, createGlobalStyle } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { breakpoints } from './utils';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -41,6 +40,9 @@ export const Button = styled.button`
   color: ${({ primary }) => (primary ? '#0C4ADA' : '#FFC636')};
   /* font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')}; */
   /* padding: ${({ big }) => (big ? '12px 64px' : '10px 17px')}; */
+  padding: 12px 64px;
+  font-size: 1.25rem;
+  font-size: clamp(1rem, 0.5556rem + 0.9259vw, 1.25rem);
   border-radius: 50px;
   white-space: nowrap;
   margin: 10px 10px 10px 0;
@@ -66,15 +68,8 @@ export const Button = styled.button`
 
   @media screen and (max-width: 992px) {
     width: 100%;
+    padding: 12px 60px;
   }
-  font-size: 1.25rem;
-  ${breakpoints('font-size', 'rem', [
-    { 1200: 1.23 },
-    { 992: 1.2 },
-    { 768: 1 },
-  ])};
-  padding: 12px 64px;
-  ${breakpoints('padding', '', [{ 992: '12px 60px' }])};
 `;
 export const DangerButton = styled(Button)`
   background: crimson;
@@ -85,6 +80,8 @@ export const DangerButton = styled(Button)`
   }
 `;
 export const H1 = styled.h1`
+  font-size: 48px;
+  font-size: clamp(1.8rem, -0.3333rem + 4.4444vw, 3rem);
   margin-bottom: 24px;
   line-height: 1;
   font-weight: 600;
@@ -99,18 +96,11 @@ export const H1 = styled.h1`
     css`
       text-align: center;
     `}
-  /* @media screen and (max-width: 992px) {
-    font-size: 30px;
-  } */
-  font-size: 3rem;
-  ${breakpoints('font-size', 'rem', [
-    { 1200: 2.9 },
-    { 992: 1.87 },
-    { 768: 1.8 },
-  ])};
 `;
 export const H2 = styled.h2`
   /* font-size: 24px; */
+  font-size: 1.6rem;
+  font-size: clamp(1.3rem, 0.7667rem + 1.1111vw, 1.6rem);
   padding: 0;
   color: #0c4ada;
   margin-bottom: 16px;
@@ -133,26 +123,16 @@ export const H2 = styled.h2`
     text-align: left;
     padding-bottom: 10px;
   }
-  font-size: 1.6rem;
-  ${breakpoints('font-size', 'rem', [
-    { 1200: 1.5 },
-    { 992: 1.4 },
-    { 768: 1.3 },
-  ])};
 `;
 export const H3 = styled.h3`
   color: ${({ lightTopLine }) => (lightTopLine ? '#a9b3c1' : '#4B59F7')};
   /* font-size: 18px; */
+  font-size: 1.17rem;
+  font-size: clamp(1.12rem, 1.0311rem + 0.1852vw, 1.17rem);
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
   margin-bottom: 16px;
-  font-size: 1.17rem;
-  ${breakpoints('font-size', 'rem', [
-    { 1200: 1.16 },
-    { 992: 1.14 },
-    { 768: 1.12 },
-  ])};
 `;
 export const Paragraph = styled.p`
   text-align: left;
